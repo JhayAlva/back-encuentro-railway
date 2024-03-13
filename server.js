@@ -2,13 +2,13 @@ require('dotenv').config()
 const express  =  require('express');
 const pipeline = require('./config_server/configpipeline_middlewares');
 const mongoose = require('mongoose');
-
+const PORT= process.env.PORT || 3000;
 var servidorWeb=express();
 pipeline(servidorWeb)
 
-servidorWeb.listen(3000,(err)=>{
+servidorWeb.listen(PORT,(err)=>{
     if(!err){
-        console.log('............servidor web EXPRESS escuchando por el puerto 3000');
+        console.log(`............servidor web EXPRESS escuchando por el puerto ${PORT}`);
     }else{
         console.log('ERROR AL LANZAR EL SERVIDOR WEB');
     }
