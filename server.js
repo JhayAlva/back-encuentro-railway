@@ -15,7 +15,7 @@ servidorWeb.listen(PORT,(err)=>{
 });
 
 mongoose.connect(process.env.URL_MONGODB)
-        .then(()=>console.log('.......conectados a EncuentroDB.....'))
+        .then(()=>console.log('.......conectados a la base de datos de EncuentroDB.....'))
         .catch((error)=>console.log('ERROR AL CONECTARSE A LA BBDD'));
 
 
